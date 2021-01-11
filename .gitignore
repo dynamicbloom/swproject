@@ -28,3 +28,4 @@ yarn-error.log*
 .idea/vcs.xml
 .idea/codeStyles/codeStyleConfig.xml
 .idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml

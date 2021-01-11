@@ -22,6 +22,7 @@ import {
   ButtonBase
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import MainPageName from './components/mainpagename';
 
 document.body.style.backgroundColor = "#1A1A1A";
 
@@ -34,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-  },
-  mainPageName: {
-    marginTop: theme.spacing(12),
   },
   cardGrid: {
     position: 'absolute',
@@ -130,19 +128,7 @@ function App() {
       </Drawer>
 
       <main>
-        <Container maxWidth='1'>
-          <div className={classes.mainPageName}>
-            <Typography
-              variant="h1"
-              style={{color: '#E0E0E0'}}
-              gutterBottom
-            >
-              <Box fontSize={14} letterSpacing={1} >
-                Главная страница
-              </Box>
-            </Typography>
-          </div>
-        </Container>
+        <MainPageName/>
         <Container className={classes.cardGrid} maxWidth= '1'>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6} md={4}>
