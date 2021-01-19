@@ -66,9 +66,7 @@ function NavBar() {
         open={open}
         onClose={() => setOpen(false)}
       >
-        <div className={classes.sidedrawer}
-             style={{ height: '100%', width : '300px', backgroundColor : '#686C6E'}}
-        >
+        <div style={{ height: '100%', width : '300px', backgroundColor : '#686C6E'}}>
           <Typography
             variant="h6"
             className={classes.menuTitle}
@@ -83,7 +81,7 @@ function NavBar() {
             style={{color: '#FFFFFF'}}
           >
             {['Транспорт', 'Корабли'].map((text) => (
-              <ListItem button key={text}>
+              <ListItem button key={text} >
                 <ListItemText primary={text} />
               </ListItem>
             ))}

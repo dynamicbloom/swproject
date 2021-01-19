@@ -20,7 +20,7 @@ function MainPageName() {
             style={{color: '#E0E0E0'}}
             gutterBottom
           >
-            <Box fontSize={14} letterSpacing={1} >
+            <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0} fontWeight={400} >
               Главная страница
             </Box>
           </Typography>

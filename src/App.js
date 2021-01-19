@@ -1,5 +1,4 @@
 import React from 'react';
-
 import MainPageName from './components/mainpagename';
 import MainPageCards from "./components/mainpagecards";
 import NavBar from "./components/navbar";
