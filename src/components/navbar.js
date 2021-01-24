@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
-import {AppBar, Box, Drawer, IconButton, List, ListItem, ListItemText, Toolbar, Typography} from "@material-ui/core";
+import {AppBar, Box, Drawer, IconButton, List, ListItem,
+  ListItemText, Toolbar, Typography
+} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,6 +15,11 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    fontFamily: 'Starjedi',
+    lineHeight: "normal",
+    fontSize: '16px',
+    marginLeft: theme.spacing(1),
+    cursor: 'pointer',
   },
   menuTitle: {
     position: 'absolute',
@@ -22,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     marginTop: theme.spacing(6),
     marginLeft: theme.spacing(1),
-    width : 300,
+    width : '242px',
   }
 }));
 
@@ -54,8 +62,10 @@ function NavBar() {
             className={classes.title}
             style={{color: '#FFE81F'}}
           >
-            <Box fontFamily='Starjedi' m={1} lineHeight="normal" fontSize={16}>
-              STAR WARS
+            <Box>
+              <Link to='/' style={{ textDecoration: 'none', color: 'inherit'}}>
+                STAR WARS
+              </Link>
             </Box>
           </Typography>
         </Toolbar>
@@ -66,7 +76,7 @@ function NavBar() {
         open={open}
         onClose={() => setOpen(false)}
       >
-        <div style={{ height: '100%', width : '300px', backgroundColor : '#686C6E'}}>
+        <div style={{ height: '100%', width : '250px', backgroundColor : '#686C6E'}}>
           <Typography
             variant="h6"
             className={classes.menuTitle}
@@ -80,10 +90,14 @@ function NavBar() {
             className={classes.listMenu}
             style={{color: '#FFFFFF'}}
           >
-            {['Транспорт', 'Корабли'].map((text) => (
-              <ListItem button key={text} >
-                <ListItemText primary={text} />
-              </ListItem>
+            {[{ text: 'People', url: '/people'},{ text: 'Planets', url: '/planets'},
+              { text: 'Starships', url: '/starships'},{ text: 'Vehicles', url: '/vehicles'}
+            ].map((item, index) => (
+              <Link to={item.url} style={{ textDecoration: 'none', color: 'inherit'}} >
+                <ListItem button key={item.text}>
+                  <ListItemText primary={item.text} />
+                </ListItem>
+              </Link>
             ))}
           </List>
         </div>
@@ -93,3 +107,4 @@ function NavBar() {
 }
 
 export default NavBar;
+// textDecoration: 'none', color: 'inherit'

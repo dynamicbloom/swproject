@@ -24,18 +24,18 @@ function MainPageCards() {
 
   const classes = useStyles();
 
-  const url = 'https://swapi.dev/api/';
-
-  const [vehicleName, setVehicleName] = useState(['pipa']);
-
-  useEffect(() => {
-
-    axios.get(url + 'vehicles/4')
-      .then((response) => {
-          setVehicleName(response.data.name);
-        }
-      )
-  }, []);
+  // const url = 'https://swapi.dev/api/';
+  //
+  // const [vehicleName, setVehicleName] = useState([]);
+  //
+  // useEffect(() => {
+  //
+  //   axios.get(url + 'vehicles/4')
+  //     .then((response) => {
+  //         setVehicleName(response.data.name);
+  //       }
+  //     )
+  // }, []);
 
   return (
     <div>
@@ -49,7 +49,7 @@ function MainPageCards() {
               <CardContent className={classes.cardContent}>
                 <Typography variant='h5' style={{color: '#FFFFFF'}}>
                   <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0.5} fontWeight={700}>
-                    Транспорт {vehicleName}
+                    Vehicle
                   </Box>
                 </Typography>
               </CardContent>
