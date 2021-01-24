@@ -27,6 +27,7 @@ function Vehicles({ data }) {
         </div>
       </Container>
     </div>
+    
     // <>
     //   <Grid columns={3}>
     //     {data.map((vehicles, i) => {
