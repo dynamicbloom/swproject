@@ -8,8 +8,6 @@ import Container from '@material-ui/core/Container';
 import routes from '../route';
 import Navbar from "./Navbar";
 
-// document.body.style.backgroundColor = "#1A1A1A";
-
 function App() {
 
   // const [people, setPeople] = useState([]);

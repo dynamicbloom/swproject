@@ -69,37 +69,37 @@ function Navbar() {
           </Typography>
         </Toolbar>
 
-        {/*<Drawer*/}
-        {/*  anchor='left'*/}
-        {/*  open={open}*/}
-        {/*  onClose={() => setOpen(false)}*/}
-        {/*>*/}
-        {/*  <div style={{ height: '100%', width : '250px', backgroundColor : '#686C6E'}}>*/}
-        {/*    <Typography*/}
-        {/*      variant="h6"*/}
-        {/*      className={classes.menuTitle}*/}
-        {/*      style={{color: '#FFE81F'}}*/}
-        {/*    >*/}
-        {/*      <Box fontFamily='Starjedi' m={1} lineHeight="normal" fontSize={16}>*/}
-        {/*        Menu*/}
-        {/*      </Box>*/}
-        {/*    </Typography>*/}
-        {/*    <List*/}
-        {/*      className={classes.listMenu}*/}
-        {/*      style={{color: '#FFFFFF'}}*/}
-        {/*    >*/}
-        {/*      {[{ text: 'People', url: '/people'},{ text: 'Planets', url: '/planets'},*/}
-        {/*        { text: 'Starships', url: '/starships'},{ text: 'Vehicles', url: '/vehicles'}*/}
-        {/*      ].map((item, index) => (*/}
-        {/*        <Link to={item.url} style={{ textDecoration: 'none', color: 'inherit'}} >*/}
-        {/*          <ListItem button key={item.text}>*/}
-        {/*            <ListItemText primary={item.text} />*/}
-        {/*          </ListItem>*/}
-        {/*        </Link>*/}
-        {/*      ))}*/}
-        {/*    </List>*/}
-        {/*  </div>*/}
-        {/*</Drawer>*/}
+        <Drawer
+          anchor='left'
+          open={open}
+          onClose={() => setOpen(false)}
+        >
+          <div style={{ height: '100%', width : '250px', backgroundColor : '#686C6E'}}>
+            <Typography
+              variant="h6"
+              className={classes.menuTitle}
+              style={{color: '#FFE81F'}}
+            >
+              <Box fontFamily='Starjedi' m={1} lineHeight="normal" fontSize={16}>
+                Menu
+              </Box>
+            </Typography>
+            <List
+              className={classes.listMenu}
+              style={{color: '#FFFFFF'}}
+            >
+              {[{ text: 'People', url: '/people'},{ text: 'Planets', url: '/planets'},
+                { text: 'Starships', url: '/starships'},{ text: 'Vehicles', url: '/vehicles'}
+              ].map((item, index) => (
+                <Link to={item.url} style={{ textDecoration: 'none', color: 'inherit'}} >
+                  <ListItem button key={item.text}>
+                    <ListItemText primary={item.text} />
+                  </ListItem>
+                </Link>
+              ))}
+            </List>
+          </div>
+        </Drawer>
       </AppBar>
 
   );
