@@ -55,6 +55,48 @@ function MainPageCards() {
               </CardContent>
             </Card>
           </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card style={{backgroundColor: "#4F4F4F"}}>
+              <CardMedia
+                className={classes.cardMedia}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography variant='h5' style={{color: '#FFFFFF'}}>
+                  <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0.5} fontWeight={700}>
+                    Planets
+                  </Box>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card style={{backgroundColor: "#4F4F4F"}}>
+              <CardMedia
+                className={classes.cardMedia}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography variant='h5' style={{color: '#FFFFFF'}}>
+                  <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0.5} fontWeight={700}>
+                    Starships
+                  </Box>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card style={{backgroundColor: "#4F4F4F"}}>
+              <CardMedia
+                className={classes.cardMedia}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography variant='h5' style={{color: '#FFFFFF'}}>
+                  <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0.5} fontWeight={700}>
+                    People
+                  </Box>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
       </Container>
     </div>
