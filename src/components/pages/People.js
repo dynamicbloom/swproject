@@ -4,7 +4,9 @@ import {Box, Container, Typography} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   peoplePageName: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(1.5),
+    marginLeft: theme.spacing(1),
   }
 }));
 
@@ -16,11 +18,11 @@ function People() {
       <Container maxWidth='1'>
         <div className={classes.peoplePageName}>
           <Typography
-            variant="h1"
+            variant="h5"
             style={{color: '#E0E0E0'}}
             gutterBottom
           >
-            <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0} fontWeight={400} >
+            <Box fontFamily='Montserrat' letterSpacing={0} fontWeight={400} >
               People
             </Box>
           </Typography>
