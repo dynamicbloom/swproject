@@ -35,26 +35,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function NavBar() {
+
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
 
-  const handleDrawer = () => {
+  const handleDrawer = (open) => {
     setOpen(true)
   }
 
   return (
     <div>
-      <AppBar position="fixed" style={{
+      <AppBar position="sticky" style={{
         backgroundColor: '#000000',
-        boxShadow: '0px 0px 0px 0px'
+        boxShadow: '0px 0px 0px 0px',
       }}>
         <Toolbar>
           <IconButton onClick={handleDrawer}
                       edge="start"
                       className={classes.menuButton}
                       color="inherit"
-                      aria-label="menu">
+                      aria-label="menu"
+          >
             <MenuIcon />
           </IconButton>
           <Typography
@@ -94,7 +96,7 @@ function NavBar() {
               { text: 'Starships', url: '/starships'},{ text: 'Vehicles', url: '/vehicles'}
             ].map((item, index) => (
               <Link to={item.url} style={{ textDecoration: 'none', color: 'inherit'}} >
-                <ListItem button key={item.text}>
+                <ListItem button key={item.text} onClick={() => setOpen(false)}>
                   <ListItemText primary={item.text} />
                 </ListItem>
               </Link>

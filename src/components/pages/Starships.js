@@ -4,7 +4,7 @@ import {Box, Container, Typography} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   starshipsPageName: {
-    marginTop: theme.spacing(12),
+    marginTop: theme.spacing(4),
   }
 }));
 

@@ -7,8 +7,6 @@ import Starships from "./components/pages/Starships";
 import People from "./components/pages/People";
 import Planets from "./components/pages/Planets";
 
-document.body.style.backgroundColor = "#1A1A1A";
-
 function App() {
   // const [people, setPeople] = useState([]);
   // const [planets, setPlanets] = useState([]);

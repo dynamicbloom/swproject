@@ -4,7 +4,7 @@ import {Box, Container, Typography} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   peoplePageName: {
-    marginTop: theme.spacing(12),
+    marginTop: theme.spacing(4),
   }
 }));
 

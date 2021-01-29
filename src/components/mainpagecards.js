@@ -1,22 +1,27 @@
 import React, {useEffect, useState} from 'react';
-import {Box, Card, CardContent, CardMedia, Container, Grid, Typography} from "@material-ui/core";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  CardActionArea,
+  CardActions,
+  Container,
+  Grid,
+  Typography
+} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
-
-  cardGrid: {
-    position: 'absolute',
-    display: 'block',
-    width: '50vw',
-    transitionDuration: '0.3s',
-    height: '60vw'
-  },
   cardMedia: {
     paddingTop: '56.25%'
   },
   cardContent: {
     marginBottom: theme.spacing(0),
+  },
+  gridBug: {
+    maxWidth: '98.5%',
   }
 }));
 
@@ -38,25 +43,38 @@ function MainPageCards() {
   // }, []);
 
   return (
-    <div>
-      <Container className={classes.cardGrid} maxWidth= '1'>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card style={{backgroundColor: "#4F4F4F"}}>
+    <Container className={classes.gridBug}
+               disableGutters>
+      <Grid container
+            spacing={3}
+            style={{
+              margin: 0,
+              width: '100%',
+            }}
+      >
+        <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+          <Card style={{backgroundColor: "#4F4F4F"}} className={classes.cardRoot}>
+            <CardActionArea>
               <CardMedia
                 className={classes.cardMedia}
+                // component="img"
+                // alt="Sand Crawler"
+                // image='/src/img/sandcrawler.jpg'
+                // title='Sand Crawler'
               />
               <CardContent className={classes.cardContent}>
                 <Typography variant='h5' style={{color: '#FFFFFF'}}>
                   <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0.5} fontWeight={700}>
-                    Vehicle
+                    People
                   </Box>
                 </Typography>
               </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card style={{backgroundColor: "#4F4F4F"}}>
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+          <Card style={{backgroundColor: "#4F4F4F"}}>
+            <CardActionArea>
               <CardMedia
                 className={classes.cardMedia}
               />
@@ -67,10 +85,12 @@ function MainPageCards() {
                   </Box>
                 </Typography>
               </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card style={{backgroundColor: "#4F4F4F"}}>
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+          <Card style={{backgroundColor: "#4F4F4F"}}>
+            <CardActionArea>
               <CardMedia
                 className={classes.cardMedia}
               />
@@ -81,25 +101,27 @@ function MainPageCards() {
                   </Box>
                 </Typography>
               </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card style={{backgroundColor: "#4F4F4F"}}>
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+          <Card style={{backgroundColor: "#4F4F4F"}}>
+            <CardActionArea>
               <CardMedia
                 className={classes.cardMedia}
               />
               <CardContent className={classes.cardContent}>
                 <Typography variant='h5' style={{color: '#FFFFFF'}}>
                   <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0.5} fontWeight={700}>
-                    People
+                    Vehicles
                   </Box>
                 </Typography>
               </CardContent>
-            </Card>
-          </Grid>
+            </CardActionArea>
+          </Card>
         </Grid>
-      </Container>
-    </div>
+      </Grid>
+    </Container>
   );
 }
 

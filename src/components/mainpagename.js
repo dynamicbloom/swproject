@@ -4,7 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   mainPageName: {
-    marginTop: theme.spacing(12),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(1.5),
+    marginLeft: theme.spacing(1),
+  },
+  mainContainer: {
+    maxWidth: '100%',
   }
 }));
 
@@ -13,14 +18,14 @@ function MainPageName() {
 
   return (
     <div>
-      <Container maxWidth='1'>
+      <Container className={classes.mainContainer}
+                 >
         <div className={classes.mainPageName}>
           <Typography
-            variant="h1"
+            variant="h5"
             style={{color: '#E0E0E0'}}
-            gutterBottom
           >
-            <Box fontFamily='Montserrat' fontSize={14} letterSpacing={0} fontWeight={400} >
+            <Box fontFamily='Montserrat' letterSpacing={0} fontWeight={400} >
               Main page
             </Box>
           </Typography>

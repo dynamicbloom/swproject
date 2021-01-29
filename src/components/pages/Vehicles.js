@@ -4,7 +4,7 @@ import {Box, Card, CardContent, CardMedia, Container, Grid, Typography} from "@m
 
 const useStyles = makeStyles((theme) => ({
   vehiclePageName: {
-    marginTop: theme.spacing(12),
+    marginTop: theme.spacing(4),
   }
 }));
 
