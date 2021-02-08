@@ -6,22 +6,25 @@ import Vehicles from "./components/pages/Vehicles";
 import Starships from "./components/pages/Starships";
 import People from "./components/pages/People";
 import Planets from "./components/pages/Planets";
+import axios from "axios";
 
 function App() {
-  // const [people, setPeople] = useState([]);
-  // const [planets, setPlanets] = useState([]);
-  // const [starships, setStarships] = useState([]);
+
+  const url = 'https://swapi.dev/api/';
+
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
-    async function fetchVehicles() {
-      let res = await fetch('https://swapi.dev/api/vehicles/?format=json');
-      let data = await res.json();
-      setVehicles(data.results);
-    }
 
-    fetchVehicles();
-  }, [])
+    axios.get(url + 'vehicles/?format=json')
+      .then((response) => {
+          setVehicles(response.data.results);
+        }
+      )
+
+  }, []);
+
+  console.log('vehicles', vehicles)
 
   return (
     <>

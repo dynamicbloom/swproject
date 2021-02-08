@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 function MainPageCards() {
 
   const classes = useStyles();
-
+  //
   // const url = 'https://swapi.dev/api/';
   //
   // const [vehicleName, setVehicleName] = useState([]);
