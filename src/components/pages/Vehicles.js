@@ -29,27 +29,6 @@ function Vehicles({ data }) {
         </div>
       </Container>
     </div>
-    // <>
-    //   <Grid columns={3}>
-    //     {data.map((vehicles, i) => {
-    //       return (
-    //         <Grid.Column key={i}>
-    //           <Card>
-    //             <Card.Content>
-    //               <Card.Header>{vehicles.name}</Card.Header>
-    //               <Card.Description>
-    //                 <strong>Price</strong>
-    //                 <p>{vehicles.cost_in_credits}</p>
-    //                 <strong>Class</strong>
-    //                 <p>{vehicles.vehicle_class}</p>
-    //               </Card.Description>
-    //             </Card.Content>
-    //           </Card>
-    //         </Grid.Column>
-    //       )
-    //     })}
-    //   </Grid>
-    // </>
   );
 }
 
