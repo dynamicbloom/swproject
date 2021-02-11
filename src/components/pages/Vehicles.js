@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Vehicles({ data }) {
+function Vehicles() {
   const classes = useStyles();
 
   return (

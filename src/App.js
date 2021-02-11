@@ -4,7 +4,8 @@ import NavBar from "./components/navbar";
 import Home from "./components/pages/Home";
 import Vehicles from "./components/pages/Vehicles";
 import Starships from "./components/pages/Starships";
-import People from "./components/pages/People";
+import People from "./components/pages/People/People";
+import Person from "./components/pages/People/Person";
 import Planets from "./components/pages/Planets";
 import axios from "axios";
 
@@ -31,21 +32,12 @@ function App() {
       <Router>
         <NavBar/>
         <Switch>
-          <Route exact path='/vehicles'>
-            <Vehicles/>
-          </Route>
-          <Route exact path='/'>
-            <Home/>
-          </Route>
-          <Route exact path='/starships'>
-            <Starships/>
-          </Route>
-          <Route exact path='/People'>
-            <People/>
-          </Route>
-          <Route exact path='/Planets'>
-            <Planets/>
-          </Route>
+          <Route exact path='/' render={(props) => <Home {...props} />} />
+          <Route exact path='/Vehicles' render={(props) => <Vehicles {...props} />} />
+          <Route exact path='/Starships' render={(props) => <Starships {...props} />} />
+          <Route exact path='/People' render={(props) => <People {...props} />} />
+          <Route exact path='/:personId' render={(props) => <Person {...props} />} />
+          <Route exact path='/Planets' render={(props) => <Planets {...props} />} />
         </Switch>
       </Router>
     </>
