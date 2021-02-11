@@ -36,7 +36,7 @@ function App() {
           <Route exact path='/Vehicles' render={(props) => <Vehicles {...props} />} />
           <Route exact path='/Starships' render={(props) => <Starships {...props} />} />
           <Route exact path='/People' render={(props) => <People {...props} />} />
-          <Route exact path='/:personId' render={(props) => <Person {...props} />} />
+          <Route exact path='/People/:personId' render={(props) => <Person {...props} />} />
           <Route exact path='/Planets' render={(props) => <Planets {...props} />} />
         </Switch>
       </Router>
