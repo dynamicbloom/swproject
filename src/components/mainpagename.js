@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Container, Typography} from "@material-ui/core";
+import {Container, Typography} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -19,15 +19,13 @@ function MainPageName() {
   return (
     <div>
       <Container className={classes.mainContainer}
-                 >
+      >
         <div className={classes.mainPageName}>
           <Typography
             variant="h5"
             style={{color: '#E0E0E0'}}
           >
-            <Box fontFamily='Montserrat' letterSpacing={0} fontWeight={400} >
-              Main page
-            </Box>
+            Main page
           </Typography>
         </div>
       </Container>

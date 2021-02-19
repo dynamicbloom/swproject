@@ -15,16 +15,13 @@ function Vehicles() {
 
   return (
     <div>
-      <Container maxWidth='1'>
+      <Container maxWidth='false'>
         <div className={classes.vehiclePageName}>
           <Typography
             variant="h5"
             style={{color: '#E0E0E0'}}
-            gutterBottom
           >
-            <Box fontFamily='Montserrat' letterSpacing={0} fontWeight={400} >
-              Vehicles
-            </Box>
+            Vehicles
           </Typography>
         </div>
       </Container>

@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     fontFamily: 'Starjedi',
-    lineHeight: "normal",
     fontSize: '16px',
     marginLeft: theme.spacing(1),
     cursor: 'pointer',
@@ -78,7 +77,7 @@ function NavBar() {
         open={open}
         onClose={() => setOpen(false)}
       >
-        <div style={{ height: '100%', width : '250px', backgroundColor : '#686C6E'}}>
+        <div style={{ height: '100%', width : '250px', backgroundColor : '#4F4F4F'}}>
           <Typography
             variant="h6"
             className={classes.menuTitle}

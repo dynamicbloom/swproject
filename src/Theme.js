@@ -1,18 +1,13 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const Theme = createMuiTheme({
+  typography: {
+    fontFamily: 'Montserrat',
+    color: 'inherit'
+  },
   palette: {
-    // primary: {
-    //   main: '#556cd6',
-    // },
-    // secondary: {
-    //   main: '#19857b',
-    // },
-    // error: {
-    //   main: red.A400,
-    // },
     background: {
-      default: "#1A1A1A",
+      default: "#1A1A1A"
     },
   },
 });
