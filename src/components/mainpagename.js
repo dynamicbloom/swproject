@@ -23,7 +23,7 @@ function MainPageName() {
         <div className={classes.mainPageName}>
           <Typography
             variant="h5"
-            style={{color: '#E0E0E0'}}
+            style={{color: '#151515'}}
           >
             Main page
           </Typography>

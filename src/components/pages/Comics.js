@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Planets() {
+function Comics() {
   const classes = useStyles();
 
   return (
@@ -19,9 +19,9 @@ function Planets() {
         <div className={classes.planetsPageName}>
           <Typography
             variant="h5"
-            style={{color: '#E0E0E0'}}
+            style={{color: '#151515'}}
           >
-            Planets
+            Comics
           </Typography>
         </div>
       </Container>
@@ -29,4 +29,4 @@ function Planets() {
   );
 }
 
-export default Planets;
+export default Comics;

@@ -21,12 +21,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '98.5%',
   },
   paginationStyle: {
-    color: '#FFFFFF',
+    color: '#151515',
 
   }
 }));
 
-function People(props) {
+function Characters(props) {
   const { history } = props;
   const classes = useStyles();
   const [peopleData, setPeopleData] = useState([]);
@@ -43,7 +43,7 @@ function People(props) {
               className={classes.cardMedia}
             />
             <CardContent className={classes.cardContent}>
-              <Typography variant='h5' style={{color: '#FFFFFF'}}>
+              <Typography variant='h5' style={{color: '#151515'}}>
                 {`${name}`}
               </Typography>
             </CardContent>
@@ -53,10 +53,13 @@ function People(props) {
     );
   };
 
+  // const apiKey = 'ecfe579608abf08017d4d1b47844f986';
+  // const url = 'https://gateway.marvel.com/v1/public/characters';
+
   useEffect(() => {
 
     axios
-      .get('https://swapi.dev/api/people/')
+      .get('https://gateway.marvel.com:443/v1/public/characters?limit=8&apikey=ecfe579608abf08017d4d1b47844f986')
       .then(function (response) {
         const { data } = response;
         const { results } = data;
@@ -78,9 +81,9 @@ function People(props) {
         <div className={classes.peoplePageName}>
           <Typography
             variant="h5"
-            style={{color: '#E0E0E0'}}
+            style={{color: '#151515'}}
           >
-            People
+            Characters
           </Typography>
         </div>
       </Container>
@@ -104,4 +107,4 @@ function People(props) {
   );
 }
 
-export default People;
+export default Characters;

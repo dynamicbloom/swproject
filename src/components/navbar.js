@@ -15,21 +15,23 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    fontFamily: 'Starjedi',
-    fontSize: '16px',
-    marginLeft: theme.spacing(1),
+    fontFamily: 'MarvelRegular',
+    fontSize: '36px',
+    marginTop: theme.spacing(1),
     cursor: 'pointer',
   },
   menuTitle: {
     position: 'absolute',
+    fontSize: '36px',
+    fontFamily: 'MarvelRegular',
     marginTop: theme.spacing(1),
-    marginLeft: theme.spacing(2),
+    marginLeft: theme.spacing(3),
   },
   listMenu: {
     position: 'absolute',
-    marginTop: theme.spacing(6),
+    marginTop: theme.spacing(7),
     marginLeft: theme.spacing(1),
-    width : '242px',
+    width : '292px',
   }
 }));
 
@@ -46,7 +48,7 @@ function NavBar() {
   return (
     <div>
       <AppBar position="sticky" style={{
-        backgroundColor: '#000000',
+        backgroundColor: '#DA3831',
         boxShadow: '0px 0px 0px 0px',
       }}>
         <Toolbar>
@@ -59,13 +61,12 @@ function NavBar() {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
             className={classes.title}
-            style={{color: '#FFE81F'}}
+            style={{color: '#FEFEFE'}}
           >
             <Box>
               <Link to='/' style={{ textDecoration: 'none', color: 'inherit'}}>
-                STAR WARS
+                MARVEL
               </Link>
             </Box>
           </Typography>
@@ -77,22 +78,22 @@ function NavBar() {
         open={open}
         onClose={() => setOpen(false)}
       >
-        <div style={{ height: '100%', width : '250px', backgroundColor : '#4F4F4F'}}>
+        <div style={{ height: '100%', width : '308px', backgroundColor : '#151515'}}>
           <Typography
-            variant="h6"
             className={classes.menuTitle}
-            style={{color: '#FFE81F'}}
+            style={{color: '#FEFEFE'}}
           >
-            <Box fontFamily='Starjedi' m={1} lineHeight="normal" fontSize={16}>
-              Menu
+            <Box>
+              <Link to='/' style={{ textDecoration: 'none', color: 'inherit'}}>
+                MENU
+              </Link>
             </Box>
           </Typography>
           <List
             className={classes.listMenu}
             style={{color: '#FFFFFF'}}
           >
-            {[{ text: 'People', url: '/people'},{ text: 'Planets', url: '/planets'},
-              { text: 'Starships', url: '/starships'},{ text: 'Vehicles', url: '/vehicles'}
+            {[{ text: 'Characters', url: '/characters'},{ text: 'Comics', url: '/comics'}
             ].map((item, index) => (
               <Link to={item.url} style={{ textDecoration: 'none', color: 'inherit'}} >
                 <ListItem button key={item.text} onClick={() => setOpen(false)}>
@@ -108,4 +109,3 @@ function NavBar() {
 }
 
 export default NavBar;
-// textDecoration: 'none', color: 'inherit'

@@ -39,11 +39,10 @@ function MainPageCards() {
               width: '100%',
             }}
       >
-        {[{ text: 'People', url: '/people'},{ text: 'Planets', url: '/planets'},
-          { text: 'Starships', url: '/starships'},{ text: 'Vehicles', url: '/vehicles'}
+        {[{ text: 'Characters', url: '/characters'},{ text: 'Comics', url: '/comics'}
         ].map((item, index) => (
           <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
-            <Card style={{backgroundColor: "#4F4F4F"}}>
+            <Card style={{backgroundColor: "#999999"}}>
               <CardActionArea>
                 <Link to={item.url} style={{ textDecoration: 'none', color: 'inherit'}}>
                   <CardMedia
